@@ -54,8 +54,7 @@ def action_wrapper(hermes, intent_message, conf):
     line = random_line(file)
     file.close()
 
-    result_sentence = "{}".format(line)
-
+    result_sentence = line
 
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
